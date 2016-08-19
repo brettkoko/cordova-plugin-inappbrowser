@@ -403,7 +403,7 @@
         }
     } 
     //if is an app store link, let the system handle it, otherwise it fails to load it
-    else if ([[ url scheme] isEqualToString:@"itms-appss"] || [[ url scheme] isEqualToString:@"itms-apps"]) {
+    else if ([[ url scheme] isEqualToString:@"itms-appss"] || [[ url scheme] isEqualToString:@"itms-apps"]  || [[ url scheme] isEqualToString:@"nrsa"] || [[ url scheme] isEqualToString:@"nrrb"]) {
         [theWebView stopLoading];
         [self openInSystem:url];
         return NO;
